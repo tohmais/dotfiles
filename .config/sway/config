@@ -26,8 +26,11 @@ exec_always mkfifo $WOBSOCK && tail -f $WOBSOCK | wob
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/.config/sway/wallhaven-136m9w.png fill
-default_border pixel 1
+output * bg ~/.config/sway/wallhaven-72w5pv.png fill
+
+default_border pixel 0
+for_window [class=".*"] border pixel 0
+gaps inner 20
 smart_borders on
 #
 # Example configuration:
@@ -227,3 +230,6 @@ include /etc/sway/config.d/*
 exec mako
 exec_always nm-applet --indicator
 exec_always /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
+exec eww
+
+bindsym $mod+o exec ~/.config/eww/launch_eww

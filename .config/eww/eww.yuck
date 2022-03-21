@@ -1,0 +1,69 @@
+(defwidget quote_side []
+    (box :class "quote-box" :orientation "h" :valign "center" :halign "center" :spacing 10 :space-evenly "false" 
+      (box :class "pfp-image")
+      (label :class "txt1" :vallign "center" :text "You know the rules, and so do I." :wrap true :limit-width 40)))
+(defwidget smol_calendar [] 
+  (box :orientation "v" :space-evenly "false" 
+    (box :class "number_day" number_day)
+    (box :class "month" month)))
+(defwidget player_side [] 
+  (box :orientation "h" :space-evenly "false" 
+    (box :class "musicart-side"
+      (image :class "musicart-side-img" :path "~/.config/eww/images/cover.png" :image-width 80 :image-height 80))
+    (box :class "musicstuff-side" :orientation "v" :space-evenly "false" 
+      (box :class "musicinfo-side" music)
+      (box :orientation "h" :halign "center" :class "musicbtn-side" :space-evenly "false" 
+        (button :onclick "playerctl previous" "")
+        (button :class "pause-play-side" :onclick "playerctl play-pause" musicstat)
+        (button :onclick "playerctl next" "")))))
+(defwidget time_side [] 
+  (box :orientation "v" :space-evenly "false" 
+    (box :orientation "h" :class "time-side" :space-evenly "true" 
+      (box :class "hour-side" hour)
+      (box :class "minute-side" min))
+    (box :class "day-side" day)))
+(defwidget sys_side [] 
+  (box :orientation "v" :space-evenly "true" 
+    (box :orientation "h" :halign "center" :class "sysbtn" :space-evenly "true" 
+      (button :class "shutdown-side" :onclick "~/.config/eww/scripts/shutdown.sh" "")
+        (button :class "reboot-side" :onclick "~/.config/eww/scripts/reboot.sh" "")
+      (button :class "lock-side" :onclick "~/.config/eww/scripts/lockscreen.sh" "")
+      (button :class "suspend-side" :onclick "~/.config/eww/scripts/suspend.sh" "")
+      (button :class "logout-side" :onclick "~/.config/eww/scripts/logout.sh" ""))))
+
+
+
+
+;;  Music vars 
+(defpoll music :interval "5s"  "~/.config/eww/scripts/gettitle && ~/.config/eww/scripts/getart")
+(defpoll art :interval "5s"  "~/.config/eww/scripts/getart")
+(defpoll musicstat :interval "1s"  "~/.config/eww/scripts/getplaying")
+(defpoll cover :interval "5s"  "~/.config/eww/images/cover.png")
+
+;; Date vars
+(defpoll number_day :interval "5h"  "date \"+%d\"")
+(defpoll month :interval "10h"  "date \"+%b\"")
+(defpoll min :interval "10s"  "date \"+%M\"")
+(defpoll hour :interval "30m"  "date \"+%H\"")
+(defpoll day :interval "15h"  "~/.config/eww/scripts/getday")
+
+(defwindow smol_calendar 
+  :monitor 0
+  :geometry (geometry :x "10px" :y "15px" :width "80px" :height "80px")
+  (smol_calendar))
+(defwindow player_side 
+  :monitor 0
+  :geometry (geometry :x "10px" :y "240px" :width "300px" :height "110px")
+  (player_side))
+(defwindow time_side 
+  :monitor 0
+  :geometry (geometry :x "10px" :y "100px" :width "300px" :height "135px")
+  (time_side))
+(defwindow sys_side 
+  :monitor 0
+  :geometry (geometry :x "10px" :y "240px" :width "300px" :height "80px")
+  (sys_side))
+(defwindow quote_side
+  :monitor 0
+  :geometry (geometry :x "95px" :y "15px" :width "215px" :height "80px")
+  (quote_side))
