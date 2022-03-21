@@ -1,0 +1,12 @@
+:set number
+:set mouse=a
+:set smarttab
+:set tabstop=4
+:set shiftwidth=4
+:set matchpairs+=<:>,「:」,『:』,【:】,“:”,‘:’,《:》
+:set linebreak
+:set showbreak=↪
+:set title
+:set titlestring=
+:set termguicolors
+:set nowrap
