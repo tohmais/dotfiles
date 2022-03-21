@@ -192,6 +192,11 @@ smart_borders on
     # backlight config
     bindsym XF86MonBrightnessUp exec light -A 5 && light -G | cut -d'.' -f1 > $WOBSOCK
     bindsym XF86MonBrightnessDown exec light -U 5 && light -G | cut -d'.' -f1 > $WOBSOCK
+
+    # screenshot config
+    bindsym Print exec grimshot --notify save output
+    bindsym Shift+Print	exec grimshot --notify save area
+
 #
 # Resizing containers:
 #
@@ -231,5 +236,6 @@ exec mako
 exec_always nm-applet --indicator
 exec_always /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
 exec eww
+
 
 bindsym $mod+o exec ~/.config/eww/launch_eww

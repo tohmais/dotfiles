@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-user_name="callum"
-tmp_dir="/home/$user_name/.config/eww/images"
+tmp_dir="$HOME/.config/eww/images"
 tmp_cover_path=$tmp_dir/cover.png
 
 if [ ! -d $tmp_dir ]; then
@@ -11,5 +10,5 @@ artlink="$(playerctl metadata mpris:artUrl | sed -e 's/open.spotify.com/i.scdn.c
 
 if [ $(playerctl metadata mpris:artUrl) ]; then
 	curl -s "$artlink" --output $tmp_cover_path;
-else cp /home/$user_name/.config/eww/images/image.png $tmp_cover_path;
+else cp $HOME/.config/eww/images/image.png $tmp_cover_path;
 fi

@@ -1,6 +1,8 @@
-source $NVIM_CONFIG_PATH/general/config.vim
-source $NVIM_CONFIG_PATH/plugins/settings.vim
-source $NVIM_CONFIG_PATH/plugins/keybinds.vim
-source $NVIM_CONFIG_PATH/plugins/dashboard.vim
-source $NVIM_CONFIG_PATH/plugins/lsp.vim
+source $XDG_CONFIG_HOME/nvim/general/config.vim
+source $XDG_CONFIG_HOME/nvim/plugins/settings.vim
+source $XDG_CONFIG_HOME/nvim/plugins/keybinds.vim
+source $XDG_CONFIG_HOME/nvim/plugins/dashboard.vim
+source $XDG_CONFIG_HOME/nvim/plugins/lsp.vim
+
 lua require('plugins.packer')
+
