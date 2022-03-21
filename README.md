@@ -1,4 +1,5 @@
 # my personal dotfiles
+![https://www.youtube.com/watch?v=dQw4w9WgXcQ](/.config/sway/linux-screenshot.png)
 hey. these are my personal dotfiles for my linux system. 
 they're probably buggy on your computer right now, but i will be making them better over time.
 here's some highlights.
