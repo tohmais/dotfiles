@@ -14,7 +14,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term alacritty
+set $term kitty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -194,8 +194,8 @@ smart_borders on
     bindsym XF86MonBrightnessDown exec light -U 5 && light -G | cut -d'.' -f1 > $WOBSOCK
 
     # screenshot config
-    bindsym Print exec grimshot --notify save output
-    bindsym Shift+Print	exec grimshot --notify save area
+    bindsym Print exec grimshot --notify save screen
+    bindsym Ctrl+Print	exec grimshot --notify save area
 
 #
 # Resizing containers:

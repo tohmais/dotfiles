@@ -1,5 +1,4 @@
 let g:coq_settings = { 'auto_start': 'shut-up' }
 
-let g:tokyonight_style = "night"
-let g:tokyonight_transparent = "true"
-colorscheme tokyonight
+let g:catppuccin_flavour = "mocha" " latte, frappe, macchiato, mocha
+colorscheme catppuccin

@@ -6,10 +6,10 @@
   
   window#waybar {
     /* background-color: rgba(18, 21, 29, 0.98); */
-    background-color: #12151d;
+    background-color: #1E1E2E;
     /* background-color: rgba(0, 0, 0, 0); */
     border-bottom: 3px solid #1e222a;
-    color: #abb2bf;
+    color: #CDD6F4;
     transition-property: background-color;
     transition-duration: .5s;
     opacity: 0.85;
@@ -34,7 +34,7 @@
   #battery,
   #network,
   #tray {
-    background-color: #1e222a;
+    background-color: #24273A;
     padding: 0 10px;
     margin: 2px 4px 5px 4px;
     border: 3px solid rgba(0, 0, 0, 0);
@@ -45,7 +45,7 @@
   #workspaces button {
     padding: 0 5px;
     min-width: 20px;
-    color: #61afef;
+    color: #cad3f5;
   }
   
   #workspaces button:hover {
@@ -57,11 +57,11 @@
   }
   
   #workspaces button.urgent {
-    color: #e06c75;
+    color: #F38BA8;
   }
   
   #cpu {
-    color: #61afef;
+    color: #89B4FA;
   }
   
   #memory {
@@ -78,16 +78,16 @@
   }
   
   #custom-media {
-    background-color: #c678dd;
+    background-color: #ca9ee6;
     color: #1e222a;
   }
   
   #custom-fans {
-    color: #98c379;
+    color: #A6E3A1;
   }
   
   #clock {
-    color: #61afef;
+    color: #89B4FA;
   }
   
   #idle_inhibitor {
@@ -104,37 +104,37 @@
   }
   
   #pulseaudio {
-    color: #d19a66;
+    color: #F9E2AF;
   }
   
   #pulseaudio.muted {
-    background-color: #e06c75;
+    background-color: #F38BA8;
     color: #1e222a;
   }
   
   #backlight {
-    color: #61afef;
+    color: #89B4FA;
   }
   
   #battery {
-    color: #98c379;
+    color: #A6E3A1;
   }
   
   #battery.charging, #battery.plugged {
-    background-color: #98c379;
+    background-color: #A6E3A1;
     color: #1e222a;
   }
   
   @keyframes blink {
       to {
-          background-color: #1e222a;
-          color: #e06c75;
+          background-color: #24273A;
+          color: #F38BA8;
       }
   }
   
   #battery.critical:not(.charging) {
-      background-color: #e06c75;
-      color: #1e222a;
+      background-color: #F38BA8;
+      color: #24273A;
       animation-name: blink;
       animation-duration: 0.5s;
       animation-timing-function: linear;
@@ -143,10 +143,10 @@
   }
   
   #network {
-      color: #c678dd
+      color: #F5C2E7
   }
   
   #network.disconnected {
-      background-color: #e06c75;
+      background-color: #F38BA8;
       color: #1e222a;
   }

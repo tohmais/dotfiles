@@ -13,7 +13,7 @@ fi
 run_eww() {
   eww open-many quote_side time_side smol_calendar sys_side
 }
-## player_side is bugged, and I can no longer pour any time into fixing it.
+## player_side is bugged, and I can no longer pour any more time into fixing it.
 ## Launch or close widgets accordingly
 if [[ ! -f "$FILE" ]]; then
 	touch "$FILE"

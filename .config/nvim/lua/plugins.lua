@@ -32,7 +32,7 @@ return require('packer').startup(function(use)
 		'nvim-telescope/telescope.nvim',
 		requires = { 'nvim-lua/plenary.nvim' },
 		cmd = 'Telescope',
-    	module = 'telescope',
+    	module = 'telescope.nvim',
     	config = function() require("telescope").setup() end,
 	}
 
@@ -40,7 +40,11 @@ return require('packer').startup(function(use)
 	
 	use 'kyazdani42/nvim-web-devicons' 
 	use "lukas-reineke/indent-blankline.nvim"
-	use 'folke/tokyonight.nvim'
+	use ({
+		"catppuccin/nvim",
+		as = "catppuccin"
+	})
+
 
 	use {
  	 	'nvim-lualine/lualine.nvim',
@@ -50,8 +54,9 @@ return require('packer').startup(function(use)
 	}
 
 	use {
+		-- i tried to lazyload telescope and it just didn't work. now i'm sad.
 		'glepnir/dashboard-nvim',
-		requires = { 'nvim-telescope/telescope.nvim', opt = true },
+		requires = {'nvim-telescope/telescope.nvim', opt = true},
 	}
 
 	use {
