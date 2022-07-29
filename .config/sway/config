@@ -157,6 +157,7 @@ smart_borders on
     bindsym XF86AudioLowerVolume exec pamixer -ud 2 && pamixer --get-volume > $WOBSOCK
     bindsym XF86AudioMute exec pamixer --toggle-mute && ( pamixer --get-mute && echo 0 > $WOBSOCK ) || pamixer --get-volume > $WOBSOCK
     bindsym XF86AudioMicMute exec --no-startup-id amixer -D pulse sset Capture toggle
+    bindsym XF86AudioPlay exec playerctl play-pause
 
     # backlight config
     bindsym XF86MonBrightnessUp exec light -A 5 && light -G | cut -d'.' -f1 > $WOBSOCK
@@ -203,7 +204,7 @@ include /etc/sway/config.d/*
 
 exec mako
 exec_always nm-applet --indicator
-exec_always /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
+exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec eww
 
 

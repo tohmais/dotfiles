@@ -9,10 +9,31 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 autoload -Uz compinit 
-compinit
+typeset -i updated_at=$(date +'%j' -r ~/.zcompdump 2>/dev/null || stat -f '%Sm' -t '%j' ~/.zcompdump 2>/dev/null)
+if [ $(date +'%j') != $updated_at ]; then
+  compinit -i
+else
+  compinit -C -i
+fi
+zmodload -i zsh/complist
 
-SAVEHIST=1000  # Save most-recent 1000 lines
+# Save most-recent 1000 lines
 HISTFILE=~/.zsh_history
+HISTSIZE=100000
+SAVEHIST=$HISTSIZE
+
+setopt hist_ignore_all_dups # remove older duplicate entries from history
+setopt hist_reduce_blanks # remove superfluous blanks from history items
+setopt inc_append_history # save history entries as soon as they are entered
+setopt share_history # share history between different instances of the shell
+
+setopt auto_cd # cd by typing directory name if it's not a command
+setopt correct_all # autocorrect commands
+
+setopt always_to_end # move cursor to end if word had one match
+
+bindkey '^[[3~' delete-char
+bindkey '^[3;5~' delete-char
 
 export MCFLY_FUZZY=true
 export PATH="$PATH:/home/linuxbrew/.linuxbrew/bin:/home/.cargo/bin:/home/bins"
@@ -20,7 +41,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export XDG_CONFIG_HOME="$HOME/.config"
 export PKG_CONFIG_PATH="/usr/lib/pkgconfig:/usr/share/pkgconfig"
 
-alias ls='ls --color'
+alias ls='lsd'
 
 eval "$(mcfly init zsh)"
 export PYENV_ROOT="$HOME/.pyenv"
