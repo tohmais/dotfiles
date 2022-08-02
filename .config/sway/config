@@ -19,7 +19,7 @@ set $term kitty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu rofi -show combi -combi-modi "drun,window,run" -modi combi
+set $menu rofi -show combi -combi-modi "drun,run" -modi combi
 
 set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
 exec_always mkfifo $WOBSOCK && tail -f $WOBSOCK | wob
@@ -31,6 +31,7 @@ output * bg ~/.config/sway/wallhaven-72w5pv.png fill
 
 # Window settings
 default_border pixel 0
+default_floating_border pixel 3
 for_window [class=".*"] border pixel 0
 gaps inner 20
 smart_borders on
@@ -207,5 +208,14 @@ exec_always nm-applet --indicator
 exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec eww
 
+set $gnome-schema org.gnome.desktop.interface
+
+exec_always {
+    gsettings set $gnome-schema gtk-theme 'Catppuccin-purple'
+    gsettings set $gnome-schema color-scheme prefer-dark
+    # gsettings set $gnome-schema icon-theme 'Your icon theme'
+    # gsettings set $gnome-schema cursor-theme 'Your cursor Theme'
+    # gsettings set $gnome-schema font-name 'Your font name'
+}
 
 bindsym $mod+o exec ~/.config/eww/launch_eww

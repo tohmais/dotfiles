@@ -38,8 +38,13 @@ bindkey '^[3;5~' delete-char
 export MCFLY_FUZZY=true
 export PATH="$PATH:/home/linuxbrew/.linuxbrew/bin:/home/.cargo/bin:/home/bins"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-export XDG_CONFIG_HOME="$HOME/.config"
 export PKG_CONFIG_PATH="/usr/lib/pkgconfig:/usr/share/pkgconfig"
+
+# export FZF_DEFAULT_OPTS=" \
+# --color \"bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8\" \
+# --color \"fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc\" \
+# --color \"marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8\""
+
 
 alias ls='lsd'
 
@@ -74,6 +79,7 @@ zinit light-mode for \
 zinit ice depth"1" # git clone depth
 zinit light romkatv/powerlevel10k
 
+
 # completion stuff
 zinit wait lucid light-mode for \
   atinit"zicompinit; zicdreplay" \
@@ -83,6 +89,22 @@ zinit wait lucid light-mode for \
   blockf atpull'zinit creinstall -q .' \
       zsh-users/zsh-completions \
   sbin romkatv/zsh-prompt-benchmark
+
+# zstyle ":fzf-tab:*" fzf-flags --height=70% \
+# --color "bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8" \
+# --color "fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc" \
+# --color "marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
+
+# disable sort when completing `git checkout`
+zstyle ':completion:*:git-checkout:*' sort false
+# set descriptions format to enable group support
+zstyle ':completion:*:descriptions' format '[%d]'
+# set list-colors to enable filename colorizing
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+# preview directory's content with exa when completing cd
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
+# switch group using `,` and `.`
+zstyle ':fzf-tab:*' switch-group ',' '.'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
