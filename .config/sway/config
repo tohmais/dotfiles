@@ -19,7 +19,7 @@ set $term kitty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu rofi -show combi -combi-modi "drun,run" -modi combi
+set $menu rofi -show drun -show-icons -display-drun Search
 
 set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
 exec_always mkfifo $WOBSOCK && tail -f $WOBSOCK | wob

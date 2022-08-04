@@ -20,6 +20,7 @@
   }
   
   #workspaces,
+  #tags,
   #mode,
   #cpu,
   #memory,
@@ -41,21 +42,25 @@
     border-radius: 90px;
     background-clip: padding-box;
   }
-  
+
+  #tags button,
   #workspaces button {
     padding: 0 5px;
     min-width: 20px;
     color: #cad3f5;
   }
   
+  #tags button:hover,
   #workspaces button:hover {
     background-color: rgba(0, 0, 0, 0.2)
   }
   
+  #tags button.focused,
   #workspaces button.focused {
     color: #c678dd;
   }
   
+  #tags button.urgent,
   #workspaces button.urgent {
     color: #F38BA8;
   }
