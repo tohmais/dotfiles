@@ -176,3 +176,4 @@ rivertile -view-padding 6 -outer-padding 6
 set $gnome-schema org.gnome.desktop.interface
 gsettings set $gnome-schema gtk-theme 'Catppuccin-purple'
 gsettings set $gnome-schema color-scheme prefer-dark
+gsettings set $gnome-schema gtk-icon-theme-name 'Catppuccin-SE'

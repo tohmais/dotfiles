@@ -56,10 +56,15 @@
   }
   
   #tags button.focused,
-  #workspaces button.focused {
+  #workspaces button.focused
+  #workspaces button.active {
     color: #c678dd;
   }
-  
+
+  #workspaces button.active {
+    color: #c678dd;
+  }
+
   #tags button.urgent,
   #workspaces button.urgent {
     color: #F38BA8;
