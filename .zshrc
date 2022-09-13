@@ -40,13 +40,13 @@ export PATH="$PATH:/home/linuxbrew/.linuxbrew/bin:/home/.cargo/bin:/home/bins"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PKG_CONFIG_PATH="/usr/lib/pkgconfig:/usr/share/pkgconfig"
 
-# export FZF_DEFAULT_OPTS=" \
-# --color \"bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8\" \
-# --color \"fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc\" \
-# --color \"marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8\""
+export FZF_DEFAULT_OPTS=" \
+--color \"bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8\" \
+--color \"fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc\" \
+--color \"marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8\""
 
 
-alias ls='lsd'
+alias ls='exa --icons'
 
 eval "$(mcfly init zsh)"
 export PYENV_ROOT="$HOME/.pyenv"

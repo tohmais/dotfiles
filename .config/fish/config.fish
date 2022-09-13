@@ -5,12 +5,14 @@ end
 fish_add_path -p /home/linuxbrew/.linuxbrew/bin/
 fish_add_path -p $HOME/.cargo/bin
 fish_add_path -p $HOME/bins
+fish_add_path -p $HOME/bin
+fish_add_path -p /usr/local/bin
 
 set -U fish_greeting
 set -U EDITOR nvim
 set -Ux PKG_CONFIG_PATH /usr/lib/pkgconfig /usr/share/pkgconfig
 
-alias ls "lsd"
+alias ls "exa --icons"
 
 while set index (contains -i -- '/home/callum/.pyenv/shims' $PATH)
 set -eg PATH[$index]; end; set -e index

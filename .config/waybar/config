@@ -5,7 +5,9 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["sway/workspaces", "river/tags", "wlr/workspaces", "sway/mode", "river/mode", "custom/media"],
+    // NOTE: add "river/mode" to modules-left if using river.
+    // This isn't here by default because it creates a weird box under hyprland.
+    "modules-left": ["sway/workspaces", "river/tags", "wlr/workspaces", "sway/mode"],
     "modules-center": ["sway/window", "river/window"],
     "modules-right": ["pulseaudio", "network", "battery", "clock", "tray"],
     // Modules configuration
