@@ -1,3 +1,4 @@
+@import "mocha.css";
 * {
     border: none;
     font-family: DejaVuSansMono Nerd Font, sans-serif;
@@ -6,10 +7,10 @@
   
   window#waybar {
     /* background-color: rgba(18, 21, 29, 0.98); */
-    background-color: #1E1E2E;
+    background-color: @base;
     /* background-color: rgba(0, 0, 0, 0); */
-    border-bottom: 3px solid #1e222a;
-    color: #CDD6F4;
+    border-bottom: 0px;
+    color: @text;
     transition-property: background-color;
     transition-duration: .5s;
     opacity: 0.85;
@@ -35,51 +36,71 @@
   #battery,
   #network,
   #tray {
-    background-color: #24273A;
-    padding: 0 10px;
+    background-color: @mantle;
     margin: 2px 4px 5px 4px;
     border: 3px solid rgba(0, 0, 0, 0);
     border-radius: 90px;
     background-clip: padding-box;
   }
 
+
+  #mode,
+  #cpu,
+  #memory,
+  #temperature,
+  #custom-media,
+  #custom-fans,
+  #clock,
+  #idle_inhibitor,
+  #language,
+  #pulseaudio,
+  #backlight,
+  #battery,
+  #network,
+  #tray {
+    padding: 0 10px;
+  }
+  #workspaces,
+  #tags {
+    padding: 0 0px;
+  }
+
   #tags button,
   #workspaces button {
     padding: 0 5px;
     min-width: 20px;
-    color: #cad3f5;
+    color: @text;
+    border-radius: 90px;
   }
   
   #tags button:hover,
   #workspaces button:hover {
-    background-color: rgba(0, 0, 0, 0.2)
+    background-color: @surface0;
   }
   
   #tags button.focused,
-  #workspaces button.focused
-  #workspaces button.active {
-    color: #c678dd;
-  }
-
-  #workspaces button.active {
-    color: #c678dd;
+  #workspaces button.active,
+  #workspaces button.focused {
+    padding: 0 10px;
+    background-color: @mauve;
+    color: @mantle;
   }
 
   #tags button.urgent,
   #workspaces button.urgent {
-    color: #F38BA8;
+    color: @red;
   }
   
   #cpu {
-    color: #89B4FA;
+    color: @blue;
   }
   
   #memory {
-    color: #c678dd;
+    color: @mauve;
   }
   
   #temperature {
-    color: #d19a66;
+    color: @peach;
   }
   
   #temperature.critical {
@@ -97,7 +118,7 @@
   }
   
   #clock {
-    color: #89B4FA;
+    color: @sky;
   }
   
   #idle_inhibitor {
@@ -114,12 +135,12 @@
   }
   
   #pulseaudio {
-    color: #F9E2AF;
+    color: @yellow;
   }
   
   #pulseaudio.muted {
-    background-color: #F38BA8;
-    color: #1e222a;
+    background-color: @red;
+    color: @mantle;
   }
   
   #backlight {
@@ -127,24 +148,24 @@
   }
   
   #battery {
-    color: #A6E3A1;
+    color: @green;
   }
   
   #battery.charging, #battery.plugged {
-    background-color: #A6E3A1;
-    color: #1e222a;
+    background-color: @green;
+    color: @mantle;
   }
   
   @keyframes blink {
       to {
-          background-color: #24273A;
-          color: #F38BA8;
+          background-color: @mantle;
+          color: @red;
       }
   }
   
   #battery.critical:not(.charging) {
-      background-color: #F38BA8;
-      color: #24273A;
+      background-color: @red;
+      color: @mantle;
       animation-name: blink;
       animation-duration: 0.5s;
       animation-timing-function: linear;
@@ -153,10 +174,10 @@
   }
   
   #network {
-      color: #F5C2E7
+      color: @rosewater;
   }
   
   #network.disconnected {
-      background-color: #F38BA8;
-      color: #1e222a;
+      background-color: @red;
+      color: @mantle;
   }

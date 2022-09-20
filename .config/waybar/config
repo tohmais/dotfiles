@@ -1,5 +1,5 @@
 {
-    // "layer": "top", // Waybar at top layer
+    "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 30, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
@@ -8,7 +8,7 @@
     // NOTE: add "river/mode" to modules-left if using river.
     // This isn't here by default because it creates a weird box under hyprland.
     "modules-left": ["sway/workspaces", "river/tags", "wlr/workspaces", "sway/mode"],
-    "modules-center": ["sway/window", "river/window"],
+    "modules-center": ["sway/window", "river/window", "hyprland/window"],
     "modules-right": ["pulseaudio", "network", "battery", "clock", "tray"],
     // Modules configuration
     // "sway/workspaces": {
@@ -119,11 +119,11 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
+        "format-wifi": "{essid} ({signalStrength}%)  ",
+        "format-ethernet": "{ipaddr}/{cidr}  ",
+        "tooltip-format": "{ifname} via {gwaddr}  ",
+        "format-linked": "{ifname} (No IP)  ",
+        "format-disconnected": "Disconnected ⚠ ",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
@@ -132,8 +132,8 @@
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
-        "format-source": " {volume}% ",
-        "format-source-muted": " ",
+        "format-source": " {volume}%  ",
+        "format-source-muted": "  ",
         "format-icons": {
             "headphone": "",
             "hands-free": "",

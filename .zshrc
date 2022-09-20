@@ -45,8 +45,9 @@ export FZF_DEFAULT_OPTS=" \
 --color \"fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc\" \
 --color \"marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8\""
 
-
-alias ls='exa --icons'
+export XCURSOR_SIZE=24
+export XCURSOR_THEME="breeze_icons"
+alias ls='exa -a --icons --group-directories-first'
 
 eval "$(mcfly init zsh)"
 export PYENV_ROOT="$HOME/.pyenv"
@@ -79,6 +80,9 @@ zinit light-mode for \
 zinit ice depth"1" # git clone depth
 zinit light romkatv/powerlevel10k
 
+export NVM_COMPLETION=true
+export NVM_SYMLINK_CURRENT="true"
+zinit wait lucid light-mode for lukechilds/zsh-nvm
 
 # completion stuff
 zinit wait lucid light-mode for \
@@ -108,7 +112,3 @@ zstyle ':fzf-tab:*' switch-group ',' '.'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

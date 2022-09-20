@@ -1,0 +1,14 @@
+/*
+!/.gitignore
+!/.zshrc*
+!/.config
+/.config/*
+!/.config/cava
+!/.config/eww
+!/.config/fish
+!/.config/hypr
+!/.config/kitty
+!/.config/nvim
+!/.config/river
+!/.config/sway
+!/.config/waybar
