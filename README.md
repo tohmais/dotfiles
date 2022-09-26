@@ -28,12 +28,12 @@
 
 ## other
 
-* custom catppuccin css on `eww` and `waybar`
-* zsh config that uses `zinit turbo` and `powerlevel10k` for good speeds
+* custom catppuccin css on `eww` and `waybar` (now using colours from official port)
+* zsh config that uses `zinit turbo` and `powerlevel10k` for good speeds (~30ms)
+* custom fastfetch theme that's based on [this preset](https://github.com/LinusDierheimer/fastfetch/blob/master/presets/examples/2) with edits to look more like [this theme](https://github.com/chick2d/neofetch-themes/blob/main/normal/config.conf)
 * uses kitty and fira code nerd font for icons and ligatures
 
 ## credits
 
 * eww widget based on modified code from [these dotfiles](https://github.com/n0tsteve/glorious-dots)
-* neofetch theme from this [repository](https://github.com/Chick2D/neofetch-themes)
 * official [catppuccin](https://github.com/catppuccin/catppuccin) ports used wherever possible

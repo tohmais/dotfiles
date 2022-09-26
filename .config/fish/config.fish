@@ -13,6 +13,7 @@ set -U EDITOR nvim
 set -Ux PKG_CONFIG_PATH /usr/lib/pkgconfig /usr/share/pkgconfig
 
 alias ls "exa --icons"
+alias neofetch "fastfetch"
 
 while set index (contains -i -- '/home/callum/.pyenv/shims' $PATH)
 set -eg PATH[$index]; end; set -e index
