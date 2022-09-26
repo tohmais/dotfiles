@@ -1,4 +1,4 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+ # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -7,7 +7,6 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 autoload -Uz compinit 
 typeset -i updated_at=$(date +'%j' -r ~/.zcompdump 2>/dev/null || stat -f '%Sm' -t '%j' ~/.zcompdump 2>/dev/null)
 if [ $(date +'%j') != $updated_at ]; then
@@ -48,6 +47,7 @@ export FZF_DEFAULT_OPTS=" \
 export XCURSOR_SIZE=24
 export XCURSOR_THEME="breeze_icons"
 alias ls='exa -a --icons --group-directories-first'
+alias neofetch='fastfetch'
 
 eval "$(mcfly init zsh)"
 export PYENV_ROOT="$HOME/.pyenv"
@@ -79,6 +79,9 @@ zinit light-mode for \
 
 zinit ice depth"1" # git clone depth
 zinit light romkatv/powerlevel10k
+
+# zinit ice from"gh-r" as"command" atload'eval "$(starship init zsh)"'
+# zinit load starship/starship
 
 export NVM_COMPLETION=true
 export NVM_SYMLINK_CURRENT="true"

@@ -12,3 +12,10 @@
 !/.config/river
 !/.config/sway
 !/.config/waybar
+!/.config/fastfetch
+
+!/.local
+/.local/*
+!/.local/share
+/.local/share/*
+!/.local/share/fastfetch
