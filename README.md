@@ -5,8 +5,9 @@
 
 > hey. these are my personal dotfiles for my linux system, version 3!  
 > they're probably buggy on your computer right now, but i will be making them better over time.  
-> i might collect dependencies and make an auto-install script in the future  
-> here's some highlights.
+> feel free to open an issue for me to improve something.  
+> here's some highlights.  
+> 
 
 ## wayland compositor cross-compatability
 
@@ -28,12 +29,19 @@
 
 ## other
 
-* custom catppuccin css on `eww` and `waybar` (now using colours from official port)
-* zsh config that uses `zinit turbo` and `powerlevel10k` for good speeds (~30ms)
-* custom fastfetch theme that's based on [this preset](https://github.com/LinusDierheimer/fastfetch/blob/master/presets/examples/2) with edits to look more like [this theme](https://github.com/chick2d/neofetch-themes/blob/main/normal/config.conf)
+* custom catppuccin css on `waybar` (now using colours from official port)
+* zsh config that uses `zinit turbo` and `powerlevel10k` for decent speeds (~30ms prompt delay)
+* custom `fastfetch` theme that's based on [this preset](https://github.com/LinusDierheimer/fastfetch/blob/master/presets/examples/2) with edits to look more like [this theme](https://github.com/chick2d/neofetch-themes/blob/main/normal/config.conf)
 * uses kitty and fira code nerd font for icons and ligatures
+
+## potential things in the future
+
+* really nice install script  
+* collecting and listing every dependency in the config  
+* improving zsh config to make it faster (<16ms)
+* refactoring all eww code (i'll readd it once that's done)
 
 ## credits
 
-* eww widget based on modified code from [these dotfiles](https://github.com/n0tsteve/glorious-dots)
-* official [catppuccin](https://github.com/catppuccin/catppuccin) ports used wherever possible
+* official [catppuccin](https://github.com/catppuccin/catppuccin) ports used wherever possible.  
+* configs built of of example configs for pretty much everything.
