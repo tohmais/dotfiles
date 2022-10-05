@@ -206,7 +206,6 @@ include /etc/sway/config.d/*
 exec mako
 exec_always nm-applet --indicator
 exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec eww
 
 set $gnome-schema org.gnome.desktop.interface
 
@@ -217,5 +216,3 @@ exec_always {
     # gsettings set $gnome-schema cursor-theme 'Your cursor Theme'
     # gsettings set $gnome-schema font-name 'Your font name'
 }
-
-bindsym $mod+o exec ~/.config/eww/launch_eww

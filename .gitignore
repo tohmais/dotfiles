@@ -4,7 +4,6 @@
 !/.config
 /.config/*
 !/.config/cava
-!/.config/eww
 !/.config/fish
 !/.config/hypr
 !/.config/kitty
