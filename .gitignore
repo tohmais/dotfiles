@@ -12,6 +12,9 @@
 !/.config/sway
 !/.config/waybar
 !/.config/fastfetch
+!/.config/ncspot
+/.config/ncspot/*
+!/.config/ncspot/config.toml
 
 !/.local
 /.local/*

@@ -1,0 +1,16 @@
+# vim: ft=cfg
+# Basic options
+use_nerdfont = true
+notify = true
+gapless = true
+flip_status_indicators=true
+shuffle = true
+repeat = 'off'
+
+[keybindings]
+
+"Backspace" = "noop"
+"Esc" = "back"
+
+"Shift+p" = "move playing"
+"p" = "playpause"
