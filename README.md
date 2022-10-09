@@ -15,11 +15,7 @@
 * sane defaults with basically identical keybinds across all three compositors.
 * compatible with both `zsh` and `fish`, too! replace `.zshrc` with `.zshrc_fish` to swap shells.
 
-### NOTES:
-
-* read the note in the waybar config file if you're using river.  
-* remember to compile waybar with the `experimental` flag for `hyprland` support.
-## neovim
+## a neovim config with mild effort
 
 * lazy loading via [`packer.nvim`](https://github.com/wbthomason/packer.nvim)
 * code completion and snippets via [`coq_nvim`](https://github.com/ms-jpq/coq_nvim), with language server installation using [`nvim-lsp-installer`](https://github.com/williamboman/nvim-lsp-installer)
@@ -27,7 +23,7 @@
 * file tree using [`chadtree`](https://github.com/ms-jpq/chadtree)
 * [`lualine.nvim`](https://github.com/nvim-lualine/lualine.nvim), [`dashboard-nvim`](https://github.com/glepnir/dashboard-nvim), and [`bufferline.nvim`](https://github.com/akinsho/bufferline.nvim) to make the editor look pretty
 
-## other
+## other features
 
 * custom catppuccin css on `waybar` (now using colours from official port)
 * zsh config that uses `zinit turbo` and `powerlevel10k` for decent speeds (~30ms prompt delay)
@@ -40,6 +36,11 @@
 * collecting and listing every dependency in the config  
 * improving zsh config to make it faster (<16ms)
 * refactoring all eww code (i'll readd it once that's done)
+
+## NOTES:
+
+* read the note in the waybar config file if you're using river.  
+* remember to compile waybar with the `experimental` flag for `hyprland` support.
 
 ## credits
 
