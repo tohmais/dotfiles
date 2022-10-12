@@ -35,7 +35,7 @@ bindkey '^[[3~' delete-char
 bindkey '^[3;5~' delete-char
 
 export MCFLY_FUZZY=true
-export PATH="$PATH:/home/linuxbrew/.linuxbrew/bin:/home/.cargo/bin:/home/bins:$HOME/.emacs.d/bin"
+export PATH="$PATH:/home/linuxbrew/.linuxbrew/bin:/home/.cargo/bin:/home/bins:$HOME/.emacs.d/bin:$HOME/.local/bin"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PKG_CONFIG_PATH="/usr/lib/pkgconfig:/usr/share/pkgconfig"
 

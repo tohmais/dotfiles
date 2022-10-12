@@ -1,7 +1,7 @@
 
 # my personal dotfiles version 3: hyprland edition!
 
-![https://www.youtube.com/watch?v=dQw4w9WgXcQ](/.config/sway/linux-screenshot-3.png)
+[![https://www.youtube.com/watch?v=dQw4w9WgXcQ](/.config/sway/linux-screenshot-3-1.png)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
 > hey. these are my personal dotfiles for my linux system, version 3!  
 > they're probably buggy on your computer right now, but i will be making them better over time.  
