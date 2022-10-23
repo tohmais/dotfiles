@@ -46,13 +46,17 @@ export FZF_DEFAULT_OPTS=" \
 
 export XCURSOR_SIZE=24
 export XCURSOR_THEME="breeze_icons"
+export DOCKER_CLI_EXPERIMENTAL=enabled
 alias ls='exa -a --icons --group-directories-first'
 alias neofetch='fastfetch'
+alias cd='z'
+alias yay='paru'
 
 eval "$(mcfly init zsh)"
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+eval "$(zoxide init zsh)"3
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
@@ -82,10 +86,6 @@ zinit light romkatv/powerlevel10k
 
 # zinit ice from"gh-r" as"command" atload'eval "$(starship init zsh)"'
 # zinit load starship/starship
-
-export NVM_COMPLETION=true
-export NVM_SYMLINK_CURRENT="true"
-zinit wait lucid light-mode for lukechilds/zsh-nvm
 
 # completion stuff
 zinit wait lucid light-mode for \

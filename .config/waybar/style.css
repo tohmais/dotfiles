@@ -13,7 +13,7 @@
     color: @text;
     transition-property: background-color;
     transition-duration: .5s;
-    opacity: 0.85;
+    opacity: 0.9;
   }
   
   window#waybar.hidden {
@@ -36,7 +36,7 @@
   #battery,
   #network,
   #tray {
-    background-color: @mantle;
+    background-color: @surface0;
     margin: 2px 4px 5px 4px;
     border: 3px solid rgba(0, 0, 0, 0);
     border-radius: 90px;
@@ -75,7 +75,7 @@
   
   #tags button:hover,
   #workspaces button:hover {
-    background-color: @surface0;
+    background-color: @surface1;
   }
   
   #tags button.focused,
@@ -83,7 +83,7 @@
   #workspaces button.focused {
     padding: 0 10px;
     background-color: @mauve;
-    color: @mantle;
+    color: @surface0;
   }
 
   #tags button.urgent,
@@ -140,7 +140,7 @@
   
   #pulseaudio.muted {
     background-color: @red;
-    color: @mantle;
+    color: @surface0;
   }
   
   #backlight {
@@ -153,19 +153,19 @@
   
   #battery.charging, #battery.plugged {
     background-color: @green;
-    color: @mantle;
+    color: @surface0;
   }
   
   @keyframes blink {
       to {
-          background-color: @mantle;
+          background-color: @surface0;
           color: @red;
       }
   }
   
   #battery.critical:not(.charging) {
       background-color: @red;
-      color: @mantle;
+      color: @surface0;
       animation-name: blink;
       animation-duration: 0.5s;
       animation-timing-function: linear;
@@ -179,5 +179,5 @@
   
   #network.disconnected {
       background-color: @red;
-      color: @mantle;
+      color: @surface0;
   }

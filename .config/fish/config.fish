@@ -6,13 +6,15 @@ fish_add_path -p /home/linuxbrew/.linuxbrew/bin/
 fish_add_path -p $HOME/.cargo/bin
 fish_add_path -p $HOME/bins
 fish_add_path -p $HOME/bin
+fish_add_path -p $HOME/.local/bin
+fish_add_path -p $HOME/.emacs.d/bin
 fish_add_path -p /usr/local/bin
 
 set -U fish_greeting
 set -U EDITOR nvim
 set -Ux PKG_CONFIG_PATH /usr/lib/pkgconfig /usr/share/pkgconfig
 
-alias ls "exa --icons"
+alias ls "exa -a --icons --group-directories-first"
 alias neofetch "fastfetch"
 
 while set index (contains -i -- '/home/callum/.pyenv/shims' $PATH)

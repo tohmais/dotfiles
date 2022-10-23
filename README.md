@@ -1,7 +1,7 @@
 
 # my personal dotfiles version 3: hyprland edition!
 
-[![https://www.youtube.com/watch?v=dQw4w9WgXcQ](/.config/sway/linux-screenshot-3-1.png)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+[![https://www.youtube.com/watch?v=dQw4w9WgXcQ](/.config/sway/linux-screenshot-3-2.png)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
 > hey. these are my personal dotfiles for my linux system, version 3!  
 > they're probably buggy on your computer right now, but i will be making them better over time.  
@@ -14,14 +14,6 @@
 * this config works basically identically across the [`sway`](https://github.com/swaywm/sway), [`river`](https://github.com/riverwm/river), and [`hyprland`](https://github.com/hyprwm/Hyprland) wayland compositors.
 * sane defaults with basically identical keybinds across all three compositors.
 * compatible with both `zsh` and `fish`, too! replace `.zshrc` with `.zshrc_fish` to swap shells.
-
-## a neovim config with mild effort
-
-* lazy loading via [`packer.nvim`](https://github.com/wbthomason/packer.nvim)
-* code completion and snippets via [`coq_nvim`](https://github.com/ms-jpq/coq_nvim), with language server installation using [`nvim-lsp-installer`](https://github.com/williamboman/nvim-lsp-installer)
-* fuzzy finding via [`telescope.nvim`](https://github.com/nvim-telescope/telescope.nvim)
-* file tree using [`chadtree`](https://github.com/ms-jpq/chadtree)
-* [`lualine.nvim`](https://github.com/nvim-lualine/lualine.nvim), [`dashboard-nvim`](https://github.com/glepnir/dashboard-nvim), and [`bufferline.nvim`](https://github.com/akinsho/bufferline.nvim) to make the editor look pretty
 
 ## other features
 
@@ -36,6 +28,7 @@
 * collecting and listing every dependency in the config  
 * improving zsh config to make it faster (<16ms)
 * refactoring all eww code (i'll readd it once that's done)
+* update nvim config (it's pretty outdated rn)
 
 ## NOTES:
 
