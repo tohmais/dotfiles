@@ -25,3 +25,5 @@
 /.local/share/applications/*
 !/.local/share/applications/kitty.desktop
 !/.local/share/applications/chromium.desktop
+
+!/.doom.d
