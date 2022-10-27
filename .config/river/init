@@ -15,7 +15,7 @@ mako &
 nm-applet --indicator &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
-riverctl spawn 'swaybg -i ~/.config/sway/wallhaven-72w5pv.png -m fill'
+riverctl spawn 'hyprpaper'
 
 riverctl spawn "dbus-update-activation-environment SEATD_SOCK DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river"
 

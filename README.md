@@ -45,6 +45,7 @@
 * `blueman`
 * `polkit-gnome`
 * `wlogout`
+* `grimshot` linked in `$PATH`
 
 ### system utils and deps
 * `Fira Code Nerd Font`
