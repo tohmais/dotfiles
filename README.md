@@ -20,6 +20,7 @@
 * custom catppuccin css on `waybar` (now using colours from official port)
 * zsh config that uses `zinit turbo` and `powerlevel10k` for decent speeds (~30ms prompt delay)
 * custom `fastfetch` theme that's based on [this preset](https://github.com/LinusDierheimer/fastfetch/blob/master/presets/examples/2) with edits to look more like [this theme](https://github.com/chick2d/neofetch-themes/blob/main/normal/config.conf)
+* custom `ncspot` theme that's based on catppuccin (mocha)
 * uses kitty and fira code nerd font for icons and ligatures
 
 ## dependencies (unfinished)

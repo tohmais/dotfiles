@@ -14,3 +14,24 @@ repeat = 'off'
 
 "Shift+p" = "move playing"
 "p" = "playpause"
+
+# custom catppuccin-mocha-mauve theme
+[theme]
+
+background = "#1E1E2E"
+primary = "#CDD6F4"
+secondary = "#BAC2DE"
+title = "#CBA6F7"
+playing = "#CBA6F7"
+playing_selected = "#1E1E2E"
+playing_bg = "#1E1E2E"
+highlight = "#1E1E2E"
+highlight_bg = "#CBA6F7"
+error = "#1E1E2E"
+error_bg = "#F38BA8"
+statusbar = "#CDD6F4"
+statusbar_progress = "#CBA6F7"
+statusbar_bg = "#1E1E2E"
+cmdline = "#CDD6F4"
+cmdline_bg = "#313244"
+
