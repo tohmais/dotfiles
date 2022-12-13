@@ -1,7 +1,7 @@
 
 # my personal dotfiles version 3: hyprland edition!
 
-[![https://www.youtube.com/watch?v=dQw4w9WgXcQ](/.config/sway/linux-screenshot-3-2.png)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+[![https://www.youtube.com/watch?v=dQw4w9WgXcQ](/.config/sway/linux-screenshot-3-3.png)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
 > hey. these are my personal dotfiles for my linux system, version 3!  
 > they're probably buggy on your computer right now, but i will be making them better over time.  
@@ -19,7 +19,7 @@
 
 * custom catppuccin css on `waybar` (now using colours from official port)
 * zsh config that uses `zinit turbo` and `powerlevel10k` for decent speeds (~30ms prompt delay)
-* custom `fastfetch` theme that's based on [this preset](https://github.com/LinusDierheimer/fastfetch/blob/master/presets/examples/2) with edits to look more like [this theme](https://github.com/chick2d/neofetch-themes/blob/main/normal/config.conf)
+* custom `fastfetch` theme that's based on [this preset](https://github.com/LinusDierheimer/fastfetch/blob/master/presets/examples/2) with edits to look more like [this theme](https://github.com/chick2d/neofetch-themes/blob/main/normal/config2.conf)
 * custom `ncspot` theme that's based on catppuccin (mocha)
 * uses kitty and fira code nerd font for icons and ligatures
 
