@@ -17,7 +17,6 @@ repeat = 'off'
 
 # custom catppuccin-mocha-mauve theme
 [theme]
-
 background = "#1E1E2E"
 primary = "#CDD6F4"
 secondary = "#BAC2DE"

@@ -51,17 +51,19 @@
 ### system utils and deps
 * `Fira Code Nerd Font`
 * `pipewire`, `pipewire-pulse` and `pipewire-alsa`
-* `pamixer` and `amixer`
+* `pamixer`
 * `playerctl`
 * `light`
 * `hyprpaper`
 * `systemd`
 * `glib2` (or whatever package `gsettings` is under)
+* `ttf-material-design-icons-extended` on the AUR for pacman icons in fastfetch
 
 ## NOTES:
 
 * read the note in the waybar config file if you're using river.  
 * remember to compile waybar with the `experimental` flag for `hyprland` support (if you're using hyprland).
+* neovim config technically included, but it's probably out of date because i've switched to doom emacs.
 
 ## potential things in the future
 
@@ -69,7 +71,7 @@
 * <s>collecting and listing every dependency in the config</s>| mostly done!  
 * improving zsh config to make it faster (<16ms)
 * refactoring all eww code (i'll readd it once that's done)
-* update nvim config (or just switch to doom emacs)
+* <s>update nvim config (or just switch to doom emacs)</s>| switched to doom emacs.
 
 ## credits
 
