@@ -9,29 +9,16 @@ fish_add_path -p $HOME/bin
 fish_add_path -p $HOME/.local/bin
 fish_add_path -p $HOME/.emacs.d/bin
 fish_add_path -p /usr/local/bin
+fish_add_path -p $HOME/.nix-profile/bin
 
 set -U fish_greeting
-set -U EDITOR nvim
+set -U EDITOR vim
 set -Ux PKG_CONFIG_PATH /usr/lib/pkgconfig /usr/share/pkgconfig
 
 alias ls "exa -a --icons --group-directories-first"
 alias neofetch "fastfetch"
-
-while set index (contains -i -- '/home/callum/.pyenv/shims' $PATH)
-set -eg PATH[$index]; end; set -e index
-set -gx PATH '/home/callum/.pyenv/shims' $PATH
-set -gx PYENV_SHELL fish
-source '/home/linuxbrew/.linuxbrew/Cellar/pyenv/2.3.2/libexec/../completions/pyenv.fish'
-command pyenv rehash 2>/dev/null
-function pyenv
-  set command $argv[1]
-  set -e argv[1]
-
-  switch "$command"
-  case rehash shell
-    source (pyenv "sh-$command" $argv|psub)
-  case '*'
-    command pyenv "$command" $argv
-  end
-end
+alias yay "paru"
 fish_add_path /home/callum/.spicetify
+
+pyenv init - | source
+zoxide init --cmd cd fish | source
